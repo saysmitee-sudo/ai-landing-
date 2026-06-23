@@ -352,7 +352,7 @@ export const heroProofs = [
 
 export const studioStats = [
   { value: "∞", label: "вариантов образа" },
-  { value: "1", label: "стабильный персонаж" },
+  { value: "∞", label: "стабильных персонажей" },
   { value: "24/7", label: "готовность к контенту" },
 ];
 

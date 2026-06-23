@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f8f6;
+  --foreground: #111111;
+  --muted: #666666;
+  --line: rgba(17, 17, 17, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(207, 196, 255, 0.25), transparent 30%),
+    radial-gradient(circle at 95% 10%, rgba(192, 223, 255, 0.2), transparent 28%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(154, 140, 255, 0.28);
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid #7567e8;
+}
+
+@layer components {
+  .page-container {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-space {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .glass {
+    @apply border border-black/[0.08] bg-white/70 shadow-glass backdrop-blur-2xl;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-white/70 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-black/60 backdrop-blur-xl;
+  }
+
+  .display-title {
+    @apply text-balance text-[clamp(2.25rem,5vw,4.85rem)] font-semibold leading-[0.98] tracking-[-0.055em];
+  }
+
+  .section-title {
+    @apply text-balance text-[clamp(2rem,4vw,4rem)] font-semibold leading-[1.02] tracking-[-0.05em];
+  }
+
+  .body-copy {
+    @apply text-pretty text-base leading-7 text-muted md:text-lg md:leading-8;
+  }
+
+  .noise {
+    position: relative;
+  }
+
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

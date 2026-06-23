@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8F8F6"/>
+  <circle cx="988" cy="84" r="280" fill="url(#a)" fill-opacity=".8"/>
+  <circle cx="159" cy="625" r="310" fill="url(#b)" fill-opacity=".7"/>
+  <rect x="72" y="68" width="1056" height="494" rx="42" fill="white" fill-opacity=".62" stroke="#111111" stroke-opacity=".08"/>
+  <text x="128" y="178" fill="#111111" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">AI MODEL STUDIO</text>
+  <text x="128" y="315" fill="#111111" font-family="Arial, sans-serif" font-size="72" font-weight="700">ИИ-персонажи</text>
+  <text x="128" y="398" fill="#111111" font-family="Arial, sans-serif" font-size="72" font-weight="700">для брендов</text>
+  <text x="130" y="484" fill="#666666" font-family="Arial, sans-serif" font-size="27">Fashion · Beauty · Lifestyle</text>
+  <defs>
+    <linearGradient id="a" x1="708" y1="-196" x2="1268" y2="364" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CFC4FF"/>
+      <stop offset="1" stop-color="#B7D8FF"/>
+    </linearGradient>
+    <linearGradient id="b" x1="-151" y1="315" x2="469" y2="935" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE1F0"/>
+      <stop offset="1" stop-color="#D9D2FF"/>
+    </linearGradient>
+  </defs>
+</svg>

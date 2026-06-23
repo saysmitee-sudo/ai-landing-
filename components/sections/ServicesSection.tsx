@@ -4,6 +4,7 @@ import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CharacterCarousel } from "@/components/sections/CharacterCarousel";
 import { CollectionCarousel } from "@/components/sections/CollectionCarousel";
+import { SocialContentCarousel } from "@/components/sections/SocialContentCarousel";
 import { services } from "@/data/site-content";
 
 export function ServicesSection() {
@@ -22,13 +23,14 @@ export function ServicesSection() {
             const Icon = service.icon!;
             const isCharacterService = index === 0;
             const isCollectionService = index === 1;
+            const isSocialService = index === 2;
 
             return (
               <AnimatedSection
                 key={service.title}
                 delay={index * 0.07}
                 className={
-                  isCharacterService || isCollectionService
+                  isCharacterService || isCollectionService || isSocialService
                     ? "md:col-span-2"
                     : ""
                 }
@@ -99,6 +101,46 @@ export function ServicesSection() {
                           </p>
                           <div className="mt-7 flex flex-wrap gap-2">
                             {["Lookbook", "Campaign", "Lifestyle", "Catalog"].map(
+                              (tag) => (
+                                <span
+                                  key={tag}
+                                  className="rounded-full border border-black/[0.07] bg-white/65 px-3 py-1.5 text-[10px] font-semibold text-black/50"
+                                >
+                                  {tag}
+                                </span>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </GlassCard>
+                ) : isSocialService ? (
+                  <GlassCard className="group h-full overflow-hidden p-4 transition duration-500 hover:border-black/[0.14] hover:shadow-lift sm:p-6">
+                    <div className="grid gap-7 md:grid-cols-[0.92fr_1.08fr] md:items-center lg:grid-cols-[0.82fr_1.18fr]">
+                      <SocialContentCarousel />
+                      <div className="px-2 pb-4 sm:px-4 md:py-6 lg:px-8">
+                        <div className="flex items-start justify-between">
+                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/[0.07] bg-white text-[#7566e5] shadow-sm">
+                            <Icon aria-hidden="true" className="h-5 w-5" />
+                          </span>
+                          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/[0.08] text-black/35 transition duration-300 group-hover:bg-ink group-hover:text-white">
+                            <ArrowUpRight
+                              aria-hidden="true"
+                              className="h-4 w-4"
+                            />
+                          </span>
+                        </div>
+                        <div className="mt-14 md:mt-20">
+                          <p className="text-xs font-bold text-black/25">03</p>
+                          <h3 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+                            {service.title}
+                          </h3>
+                          <p className="mt-4 max-w-xl text-sm leading-6 text-muted sm:text-base sm:leading-7">
+                            {service.description}
+                          </p>
+                          <div className="mt-7 flex flex-wrap gap-2">
+                            {["Stories", "Reels", "UGC-style", "Ads"].map(
                               (tag) => (
                                 <span
                                   key={tag}

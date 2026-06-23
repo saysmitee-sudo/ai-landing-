@@ -15,13 +15,13 @@ export function Header() {
         <a
           href="#top"
           className="flex items-center gap-2.5"
-          aria-label="AI Model Studio — на главную"
+          aria-label="Flassy Studio — на главную"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white">
             <Sparkles aria-hidden="true" className="h-4 w-4" />
           </span>
           <span className="text-sm font-bold tracking-[-0.02em] sm:text-base">
-            AI Model Studio
+            Flassy Studio
           </span>
         </a>
 

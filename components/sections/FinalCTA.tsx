@@ -31,7 +31,7 @@ export function FinalCTA() {
                   формат работы под ваш бюджет.
                 </p>
                 <a
-                  href="https://t.me/aimodelstudio"
+                  href="https://t.me/flassystudio"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"

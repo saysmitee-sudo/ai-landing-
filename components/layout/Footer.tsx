@@ -12,7 +12,7 @@ export function Footer() {
                 <Sparkles aria-hidden="true" className="h-4 w-4" />
               </span>
               <span className="font-bold tracking-[-0.02em]">
-                AI Model Studio
+                Flassy Studio
               </span>
             </a>
             <p className="mt-5 max-w-md text-sm leading-6 text-muted">
@@ -51,16 +51,16 @@ export function Footer() {
                 <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
               </a>
               <a
-                href="mailto:hello@aimodelstudio.ru"
+                href="mailto:hello@flassy.studio"
                 className="text-sm text-black/65 transition hover:text-black"
               >
-                hello@aimodelstudio.ru
+                hello@flassy.studio
               </a>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-3 pt-6 text-xs text-black/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 AI Model Studio. Все права защищены.</p>
+          <p>© 2026 Flassy Studio. Все права защищены.</p>
           <p>Fashion × AI × Creative production</p>
         </div>
       </div>

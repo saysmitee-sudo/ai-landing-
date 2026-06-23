@@ -9,12 +9,12 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aimodelstudio.example"),
-  title: "AI Model Studio — ИИ-модели и фото-сеты для брендов",
+  metadataBase: new URL("https://flassy-studio.example"),
+  title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
   description:
     "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для брендов одежды, обуви, beauty и lifestyle. Быстрее и дешевле классических съемок.",
   openGraph: {
-    title: "AI Model Studio — ИИ-модели и фото-сеты для брендов",
+    title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
     description:
       "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для fashion, beauty и lifestyle-брендов.",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "AI Model Studio",
+        alt: "Flassy Studio",
       },
     ],
   },

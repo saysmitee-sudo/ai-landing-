@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { AudienceSection } from "@/components/sections/AudienceSection";
+import { AppearanceSection } from "@/components/sections/AppearanceSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <AppearanceSection />
         <BenefitsSection />
         <VisualTypesSection />
         <AudienceSection />

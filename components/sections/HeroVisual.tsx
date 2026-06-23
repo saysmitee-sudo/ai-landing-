@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Aperture, Layers3, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 const tags = ["Campaign", "Lookbook", "Social Content", "E-commerce"];
 
@@ -24,11 +25,15 @@ export function HeroVisual() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         className="absolute left-[5%] top-[8%] h-[56%] w-[48%] -rotate-4 overflow-hidden rounded-[28px] border border-white/70 bg-[#d9d3cf] shadow-lift"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_20%,#f5e6df_0,transparent_15%),linear-gradient(155deg,#d7d0ce_0%,#b7adc7_45%,#77728e_100%)]" />
-        <div className="absolute left-1/2 top-[17%] h-[25%] w-[34%] -translate-x-1/2 rounded-[48%_48%_44%_44%] bg-[#c89d89] shadow-[inset_-18px_-8px_26px_rgba(77,45,55,0.24)]" />
-        <div className="absolute left-1/2 top-[8%] h-[18%] w-[38%] -translate-x-1/2 rounded-[60%_60%_30%_30%] bg-[#28242d]" />
-        <div className="absolute left-1/2 top-[37%] h-[62%] w-[78%] -translate-x-1/2 rounded-t-[48%] bg-gradient-to-b from-[#f1e9e3] to-[#9c94ae]" />
-        <div className="absolute inset-x-0 bottom-0 h-[28%] bg-gradient-to-t from-black/45 to-transparent" />
+        <Image
+          src="/model-portrait.png"
+          alt="Портрет виртуальной модели"
+          fill
+          priority
+          sizes="(max-width: 640px) 48vw, 275px"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/[0.06]" />
         <div className="absolute left-5 top-5 rounded-full border border-white/30 bg-black/20 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-xl">
           Model 01
         </div>
@@ -44,12 +49,15 @@ export function HeroVisual() {
         transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute right-[3%] top-[22%] h-[58%] w-[49%] rotate-3 overflow-hidden rounded-[30px] border border-white/70 bg-[#cbd4da] shadow-lift"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,#ffece4_0,transparent_14%),linear-gradient(160deg,#dcebf0_0%,#b6c5d4_44%,#73798f_100%)]" />
-        <div className="absolute left-1/2 top-[15%] h-[25%] w-[34%] -translate-x-1/2 rounded-[48%] bg-[#b97e69] shadow-[inset_18px_-8px_28px_rgba(69,39,46,0.2)]" />
-        <div className="absolute left-1/2 top-[7%] h-[22%] w-[42%] -translate-x-1/2 rounded-[60%_58%_35%_38%] bg-[#17171d]" />
-        <div className="absolute left-1/2 top-[36%] h-[64%] w-[84%] -translate-x-1/2 rounded-t-[46%] bg-gradient-to-b from-[#252731] to-[#777a8c]" />
-        <div className="absolute left-[16%] top-[43%] h-[46%] w-[8%] -rotate-12 rounded-full bg-white/25 blur-[1px]" />
-        <div className="absolute inset-x-0 bottom-0 h-[28%] bg-gradient-to-t from-black/45 to-transparent" />
+        <Image
+          src="/model-campaign.png"
+          alt="Fashion-съемка виртуальной модели"
+          fill
+          priority
+          sizes="(max-width: 640px) 49vw, 280px"
+          className="object-cover object-[48%_center]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/[0.08]" />
         <div className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-white/15 text-white backdrop-blur-xl">
           <Aperture aria-hidden="true" className="h-4 w-4" />
         </div>

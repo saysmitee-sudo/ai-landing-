@@ -1,4 +1,5 @@
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { processSteps } from "@/data/site-content";
 
@@ -6,9 +7,13 @@ export function ProcessSection() {
   return (
     <section
       id="process"
-      className="section-space overflow-hidden bg-[#121214] text-white"
+      className="section-space relative overflow-hidden bg-[#121214] text-white"
     >
-      <div className="page-container">
+      <FloatingAccents
+        labels={["Brief", "Concept", "Delivery"]}
+        tone="dark"
+      />
+      <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Процесс"

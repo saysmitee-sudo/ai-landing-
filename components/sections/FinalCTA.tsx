@@ -1,11 +1,12 @@
 import { MessageCircle, Sparkles } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { ContactForm } from "@/components/shared/ContactForm";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { GradientBlob } from "@/components/shared/GradientBlob";
 
 export function FinalCTA() {
   return (
-    <section id="contact" className="section-space pt-10">
+    <section id="contact" className="section-space pt-5">
       <div className="page-container">
         <AnimatedSection>
           <div className="noise relative overflow-hidden rounded-[38px] bg-[#171719] px-5 py-10 text-white shadow-[0_40px_100px_rgba(30,24,61,0.22)] sm:px-8 sm:py-14 lg:px-14">
@@ -14,7 +15,12 @@ export function FinalCTA() {
               className="-bottom-32 -left-24 h-96 w-96 bg-[#5f9ed1]/40"
               duration={12}
             />
-            <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <FloatingAccents
+              labels={["Brief", "Estimate", "Start"]}
+              tone="dark"
+              reverse
+            />
+            <div className="relative z-10 grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-3.5 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white/60 backdrop-blur-xl">
                   <Sparkles

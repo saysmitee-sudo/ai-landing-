@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-2 pt-32 sm:pb-12 sm:pt-32 lg:flex lg:items-center lg:pb-10"
+      className="relative overflow-hidden pb-2 pt-32 sm:pb-6 sm:pt-32 lg:flex lg:items-center lg:pb-5"
     >
       <GradientBlob className="-left-40 top-32 h-[420px] w-[420px] bg-[#e7d9ff]/55" />
       <GradientBlob
@@ -24,7 +24,7 @@ export function HeroSection() {
             </div>
             <h1 className="display-title mt-7 max-w-[720px]">
               ИИ-персонажи и фото-сеты для{" "}
-              <span className="bg-gradient-to-r from-[#7667ea] via-[#927cec] to-[#6f9ed4] bg-clip-text text-transparent">
+              <span className="inline-block pb-[0.04em] pr-[0.08em] bg-gradient-to-r from-[#7667ea] via-[#927cec] to-[#6f9ed4] bg-clip-text text-transparent">
                 fashion-брендов
               </span>
             </h1>
@@ -35,7 +35,7 @@ export function HeroSection() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton openContact className="w-full sm:w-auto">
-                Рассчитать проект
+                Рассчитать стоимость проекта
               </CTAButton>
               <CTAButton
                 href="#visuals"

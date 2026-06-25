@@ -1,12 +1,14 @@
 import { Check } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { audience } from "@/data/site-content";
 
 export function AudienceSection() {
   return (
-    <section className="section-space">
-      <div className="page-container">
+    <section className="section-space relative overflow-hidden">
+      <FloatingAccents labels={["Brand fit", "Market", "Style"]} reverse />
+      <div className="page-container relative z-10">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-10">
           <AnimatedSection className="lg:sticky lg:top-28">
             <SectionHeading

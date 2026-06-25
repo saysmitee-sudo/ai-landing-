@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { CharacterCarousel } from "@/components/sections/CharacterCarousel";
 import { CollectionCarousel } from "@/components/sections/CollectionCarousel";
 import { SocialContentCarousel } from "@/components/sections/SocialContentCarousel";
@@ -9,8 +10,12 @@ import { services } from "@/data/site-content";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="pb-12 pt-4 md:pb-16 md:pt-10 lg:pb-20 lg:pt-10">
-      <div className="page-container">
+    <section
+      id="services"
+      className="relative overflow-hidden pb-6 pt-2 md:pb-8 md:pt-5 lg:pb-10 lg:pt-5"
+    >
+      <FloatingAccents labels={["Model ID", "Photo set", "AI flow"]} />
+      <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Что мы делаем"

@@ -1,13 +1,15 @@
 import { Check, Sparkles } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { packages } from "@/data/site-content";
 
 export function PackagesSection() {
   return (
-    <section className="section-space" id="packages">
-      <div className="page-container">
+    <section className="section-space relative overflow-hidden" id="packages">
+      <FloatingAccents labels={["Start", "Pack", "Campaign"]} />
+      <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Форматы работы"
@@ -55,7 +57,7 @@ export function PackagesSection() {
                     {item.description}
                   </p>
                 </div>
-                <ul className="relative mt-8 grid gap-3">
+                <ul className="relative mb-7 mt-8 grid gap-3 lg:mb-8">
                   {item.features.map((feature) => (
                     <li
                       key={feature}

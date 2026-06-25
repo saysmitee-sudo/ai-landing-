@@ -1,11 +1,13 @@
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { visualTypes } from "@/data/site-content";
 
 export function VisualTypesSection() {
   return (
-    <section id="visuals" className="section-space">
-      <div className="page-container">
+    <section id="visuals" className="section-space relative overflow-hidden">
+      <FloatingAccents labels={["Lookbook", "Ads", "UGC"]} />
+      <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Возможности"

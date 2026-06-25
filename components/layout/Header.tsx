@@ -11,10 +11,18 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-      <div className="mx-auto flex h-[68px] max-w-[1280px] items-center justify-between rounded-full border border-white/60 bg-white/70 px-4 shadow-[0_12px_40px_rgba(20,20,30,0.06)] backdrop-blur-2xl sm:px-5">
+      <div className="relative mx-auto flex h-[68px] max-w-[1280px] items-center justify-between overflow-hidden rounded-full border border-white/55 bg-white/[0.38] px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.85),inset_0_-1px_0_rgba(255,255,255,0.28),0_18px_55px_rgba(24,32,56,0.10)] backdrop-blur-3xl backdrop-saturate-150 sm:px-5">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(115deg,rgba(255,255,255,0.42),rgba(255,255,255,0.12)_42%,rgba(193,221,255,0.18)_100%)]"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-16 -top-20 h-32 w-48 rounded-full bg-white/45 blur-2xl"
+        />
         <a
           href="#top"
-          className="flex items-center gap-2.5"
+          className="relative z-10 flex items-center gap-2.5"
           aria-label="Flassy Studio — на главную"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white">
@@ -26,7 +34,7 @@ export function Header() {
         </a>
 
         <nav
-          className="hidden items-center gap-7 lg:flex"
+          className="relative z-10 hidden items-center gap-7 lg:flex"
           aria-label="Основная навигация"
         >
           {navItems.map((item) => (
@@ -40,7 +48,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden sm:block">
+        <div className="relative z-10 hidden sm:block">
           <CTAButton openContact className="min-h-10 px-4">
             Обсудить проект
           </CTAButton>
@@ -48,7 +56,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/70 lg:hidden"
+          className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/55 bg-white/[0.36] shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_8px_22px_rgba(22,30,48,0.08)] backdrop-blur-2xl lg:hidden"
           aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}

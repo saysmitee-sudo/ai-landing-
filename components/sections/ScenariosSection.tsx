@@ -1,11 +1,13 @@
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { scenarios } from "@/data/site-content";
 
 export function ScenariosSection() {
   return (
-    <section className="section-space">
-      <div className="page-container">
+    <section className="section-space relative overflow-hidden">
+      <FloatingAccents labels={["Launch", "Social", "Ambassador"]} />
+      <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Сценарии"

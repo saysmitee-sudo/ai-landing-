@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { faqs } from "@/data/site-content";
 
@@ -12,8 +13,9 @@ export function FAQSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="faq" className="section-space">
-      <div className="page-container">
+    <section id="faq" className="section-space relative overflow-hidden">
+      <FloatingAccents labels={["Terms", "Usage", "Timing"]} reverse />
+      <div className="page-container relative z-10">
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-10">
           <AnimatedSection>
             <SectionHeading

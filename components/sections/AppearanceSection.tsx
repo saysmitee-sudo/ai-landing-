@@ -1,6 +1,7 @@
 import { Palette, ScanFace, Sparkles, UsersRound } from "lucide-react";
 import { AppearanceCarousel } from "@/components/sections/AppearanceCarousel";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionBadge } from "@/components/shared/SectionBadge";
 
@@ -35,7 +36,12 @@ export function AppearanceSection() {
           <GlassCard className="relative overflow-hidden p-5 sm:p-7 lg:p-10">
             <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#cfc4ff]/35 blur-3xl" />
             <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#c0dfff]/35 blur-3xl" />
-            <div className="relative grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <FloatingAccents
+              className="opacity-70"
+              labels={["Face map", "Style ID", "Persona"]}
+              reverse
+            />
+            <div className="relative z-10 grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
               <div className="order-2 lg:order-1">
                 <AppearanceCarousel />
               </div>

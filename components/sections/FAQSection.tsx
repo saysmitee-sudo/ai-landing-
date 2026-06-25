@@ -14,7 +14,7 @@ export function FAQSection() {
   return (
     <section id="faq" className="section-space">
       <div className="page-container">
-        <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-10">
           <AnimatedSection>
             <SectionHeading
               badge="FAQ"

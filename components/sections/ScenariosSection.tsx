@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { scenarios } from "@/data/site-content";
@@ -14,11 +13,11 @@ export function ScenariosSection() {
             description="Не просто отдельные картинки, а законченные решения под конкретную маркетинговую задачу."
           />
         </AnimatedSection>
-        <div className="mt-12 grid gap-4 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:mt-10 lg:grid-cols-3">
           {scenarios.map((scenario, index) => (
             <AnimatedSection key={scenario.title} delay={index * 0.08}>
               <article
-                className={`group relative flex h-full min-h-[440px] flex-col overflow-hidden rounded-[30px] border border-black/[0.08] p-6 transition duration-500 hover:-translate-y-1 hover:shadow-lift sm:p-8 ${
+                className={`group relative flex h-full min-h-[310px] flex-col overflow-hidden rounded-[28px] border border-black/[0.08] p-5 transition duration-500 hover:-translate-y-1 hover:shadow-lift sm:min-h-[330px] sm:p-6 ${
                   index === 1
                     ? "bg-[#151518] text-white"
                     : "bg-white/70"
@@ -33,23 +32,12 @@ export function ScenariosSection() {
                         : "bg-[#c7e5ff]/70"
                   }`}
                 />
-                <div className="relative flex items-start justify-between">
-                  <span
-                    className={`text-xs font-bold ${index === 1 ? "text-white/35" : "text-black/25"}`}
-                  >
-                    {scenario.number}
-                  </span>
-                  <span
-                    className={`flex h-10 w-10 items-center justify-center rounded-full border ${
-                      index === 1
-                        ? "border-white/15 bg-white/5 text-white"
-                        : "border-black/10 bg-white/70"
-                    }`}
-                  >
-                    <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                </div>
-                <div className="relative mt-auto">
+                <span
+                  className={`relative text-xs font-bold ${index === 1 ? "text-white/35" : "text-black/25"}`}
+                >
+                  {scenario.number}
+                </span>
+                <div className="relative mt-8 sm:mt-10">
                   <p
                     className={`text-[10px] font-bold uppercase tracking-[0.16em] ${
                       index === 1 ? "text-[#afa4ff]" : "text-[#7566e5]"
@@ -57,17 +45,17 @@ export function ScenariosSection() {
                   >
                     {scenario.label}
                   </p>
-                  <h3 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em]">
+                  <h3 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.045em] sm:text-[1.7rem]">
                     {scenario.title}
                   </h3>
                   <p
-                    className={`mt-4 text-sm leading-6 ${
+                    className={`mt-3 text-sm leading-6 ${
                       index === 1 ? "text-white/55" : "text-muted"
                     }`}
                   >
                     {scenario.description}
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-5 flex flex-wrap gap-2">
                     {scenario.deliverables.map((item) => (
                       <span
                         key={item}

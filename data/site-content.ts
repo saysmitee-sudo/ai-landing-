@@ -59,12 +59,6 @@ export const services: CardItem[] = [
       "Готовим визуалы для постов, Reels, Stories, баннеров и рекламных креативов.",
     icon: LayoutGrid,
   },
-  {
-    title: "Визуальные кампании",
-    description:
-      "Собираем цельную концепцию: персонаж, образы, локации, настроение и серия материалов.",
-    icon: Megaphone,
-  },
 ];
 
 export const benefits: CardItem[] = [

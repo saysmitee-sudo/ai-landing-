@@ -15,7 +15,7 @@ export function BenefitsSection() {
             description="Убираем сложную организацию классического продакшна, сохраняя контроль над эстетикой и качеством визуала."
           />
         </AnimatedSection>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-[32px] border border-black/[0.08] bg-black/[0.08] md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-px overflow-hidden rounded-[32px] border border-black/[0.08] bg-black/[0.08] md:mt-10 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon!;
             return (
@@ -24,14 +24,14 @@ export function BenefitsSection() {
                 delay={index * 0.05}
                 className="h-full"
               >
-                <article className="group h-full min-h-[245px] bg-[#fbfbfa]/95 p-6 transition duration-500 hover:bg-white sm:p-8">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#eee9ff] to-[#e7f3ff] text-[#7566e5] transition duration-500 group-hover:scale-110">
-                    <Icon aria-hidden="true" className="h-5 w-5" />
+                <article className="group h-full min-h-[190px] bg-[#fbfbfa]/95 p-5 transition duration-500 hover:bg-white sm:min-h-[205px] sm:p-6">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#eee9ff] to-[#e7f3ff] text-[#7566e5] transition duration-500 group-hover:scale-110">
+                    <Icon aria-hidden="true" className="h-[18px] w-[18px]" />
                   </span>
-                  <h3 className="mt-10 text-xl font-semibold tracking-[-0.03em]">
+                  <h3 className="mt-6 text-lg font-semibold tracking-[-0.03em] sm:text-xl">
                     {benefit.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-muted">
+                  <p className="mt-2 text-sm leading-6 text-muted">
                     {benefit.description}
                   </p>
                 </article>

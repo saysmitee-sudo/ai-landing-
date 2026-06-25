@@ -16,7 +16,7 @@ export function ProcessSection() {
             description="Прозрачный маршрут от первой идеи до готовых материалов. Вы участвуете в ключевых согласованиях и понимаете, что происходит на каждом этапе."
           />
         </AnimatedSection>
-        <div className="relative mt-16">
+        <div className="relative mt-10 md:mt-12">
           <div className="absolute left-[31px] top-0 h-full w-px bg-white/10 lg:left-0 lg:top-[31px] lg:h-px lg:w-full" />
           <div className="grid gap-4 lg:grid-cols-6">
             {processSteps.map((step, index) => (

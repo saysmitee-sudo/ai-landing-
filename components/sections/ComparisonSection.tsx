@@ -14,8 +14,42 @@ export function ComparisonSection() {
             description="Сравниваем не творческий результат, а организационную модель производства контента."
           />
         </AnimatedSection>
-        <AnimatedSection className="mt-12">
-          <div className="overflow-hidden rounded-[30px] border border-black/[0.08] bg-white/65 shadow-glass">
+        <AnimatedSection className="mt-8 md:mt-10">
+          <div className="grid gap-3 md:hidden">
+            {comparisonRows.map((row) => (
+              <article
+                key={row.criterion}
+                className="overflow-hidden rounded-[24px] border border-black/[0.08] bg-white/70 shadow-glass"
+              >
+                <h3 className="px-4 py-4 text-lg font-semibold tracking-[-0.035em]">
+                  {row.criterion}
+                </h3>
+                <div className="grid grid-cols-2 border-t border-black/[0.07]">
+                  <div className="min-w-0 p-4 text-sm leading-5 text-muted">
+                    <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.12em] text-black/35">
+                      <Minus
+                        aria-hidden="true"
+                        className="h-3.5 w-3.5 shrink-0 text-black/25"
+                      />
+                      Обычная
+                    </div>
+                    <p>{row.classic}</p>
+                  </div>
+                  <div className="min-w-0 border-l border-black/[0.07] bg-gradient-to-br from-[#f1edff]/80 to-[#edf7ff]/80 p-4 text-sm font-semibold leading-5">
+                    <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#7566e5]">
+                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#7566e5] text-white">
+                        <Check aria-hidden="true" className="h-2.5 w-2.5" />
+                      </span>
+                      AI
+                    </div>
+                    <p>{row.ai}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="hidden overflow-hidden rounded-[30px] border border-black/[0.08] bg-white/65 shadow-glass md:block">
             <div className="hidden grid-cols-[0.7fr_1fr_1fr] border-b border-black/[0.08] bg-white/80 md:grid">
               <div className="p-5 text-xs font-bold uppercase tracking-[0.14em] text-black/35">
                 Критерий

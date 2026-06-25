@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden pb-20 pt-32 sm:pt-36 lg:flex lg:items-center lg:pb-24"
+      className="relative overflow-hidden pb-2 pt-32 sm:pb-12 sm:pt-32 lg:flex lg:items-center lg:pb-10"
     >
       <GradientBlob className="-left-40 top-32 h-[420px] w-[420px] bg-[#e7d9ff]/55" />
       <GradientBlob

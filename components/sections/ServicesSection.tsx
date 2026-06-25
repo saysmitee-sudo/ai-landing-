@@ -9,7 +9,7 @@ import { services } from "@/data/site-content";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="section-space">
+    <section id="services" className="pb-12 pt-4 md:pb-16 md:pt-10 lg:pb-20 lg:pt-10">
       <div className="page-container">
         <AnimatedSection>
           <SectionHeading
@@ -18,7 +18,7 @@ export function ServicesSection() {
             description="Разрабатываем виртуальных персонажей для рекламных кампаний, соцсетей, каталогов, lookbook-съемок и промо-материалов."
           />
         </AnimatedSection>
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-2">
           {services.map((service, index) => {
             const Icon = service.icon!;
             const isCharacterService = index === 0;
@@ -40,18 +40,7 @@ export function ServicesSection() {
                     <div className="grid gap-7 md:grid-cols-[0.9fr_1.1fr] md:items-center lg:grid-cols-[0.82fr_1.18fr]">
                       <CharacterCarousel />
                       <div className="px-2 pb-4 sm:px-4 md:py-6 lg:px-8">
-                        <div className="flex items-start justify-between">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/[0.07] bg-white text-[#7566e5] shadow-sm">
-                            <Icon aria-hidden="true" className="h-5 w-5" />
-                          </span>
-                          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/[0.08] text-black/35 transition duration-300 group-hover:bg-ink group-hover:text-white">
-                            <ArrowUpRight
-                              aria-hidden="true"
-                              className="h-4 w-4"
-                            />
-                          </span>
-                        </div>
-                        <div className="mt-14 md:mt-24">
+                        <div className="mt-2 md:mt-6">
                           <p className="text-xs font-bold text-black/25">01</p>
                           <h3 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
                             {service.title}
@@ -80,18 +69,7 @@ export function ServicesSection() {
                     <div className="grid gap-7 md:grid-cols-[1.1fr_0.9fr] md:items-center lg:grid-cols-[1.18fr_0.82fr]">
                       <CollectionCarousel />
                       <div className="px-2 pb-4 sm:px-4 md:py-6 lg:px-8">
-                        <div className="flex items-start justify-between">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/[0.07] bg-white text-[#7566e5] shadow-sm">
-                            <Icon aria-hidden="true" className="h-5 w-5" />
-                          </span>
-                          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/[0.08] text-black/35 transition duration-300 group-hover:bg-ink group-hover:text-white">
-                            <ArrowUpRight
-                              aria-hidden="true"
-                              className="h-4 w-4"
-                            />
-                          </span>
-                        </div>
-                        <div className="mt-14 md:mt-20">
+                        <div className="mt-2 md:mt-6">
                           <p className="text-xs font-bold text-black/25">02</p>
                           <h3 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
                             {service.title}
@@ -120,18 +98,7 @@ export function ServicesSection() {
                     <div className="grid gap-7 md:grid-cols-[0.92fr_1.08fr] md:items-center lg:grid-cols-[0.82fr_1.18fr]">
                       <SocialContentCarousel />
                       <div className="px-2 pb-4 sm:px-4 md:py-6 lg:px-8">
-                        <div className="flex items-start justify-between">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/[0.07] bg-white text-[#7566e5] shadow-sm">
-                            <Icon aria-hidden="true" className="h-5 w-5" />
-                          </span>
-                          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/[0.08] text-black/35 transition duration-300 group-hover:bg-ink group-hover:text-white">
-                            <ArrowUpRight
-                              aria-hidden="true"
-                              className="h-4 w-4"
-                            />
-                          </span>
-                        </div>
-                        <div className="mt-14 md:mt-20">
+                        <div className="mt-2 md:mt-6">
                           <p className="text-xs font-bold text-black/25">03</p>
                           <h3 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
                             {service.title}

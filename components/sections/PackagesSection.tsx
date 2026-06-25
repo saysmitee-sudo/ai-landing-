@@ -15,7 +15,7 @@ export function PackagesSection() {
             description="Финальный состав проекта определяем после брифа — без лишних услуг и непрозрачных пакетов."
           />
         </AnimatedSection>
-        <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-3">
+        <div className="mt-8 grid items-stretch gap-4 md:mt-10 lg:grid-cols-3">
           {packages.map((item, index) => (
             <AnimatedSection key={item.name} delay={index * 0.08}>
               <article

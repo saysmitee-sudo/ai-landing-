@@ -7,7 +7,7 @@ export function AudienceSection() {
   return (
     <section className="section-space">
       <div className="page-container">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-10">
           <AnimatedSection className="lg:sticky lg:top-28">
             <SectionHeading
               badge="Для кого"

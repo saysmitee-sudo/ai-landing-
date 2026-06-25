@@ -13,10 +13,10 @@ const collectionImages = [
     position: "object-[48%_center]",
   },
   {
-    src: "/collection-black-studio.png",
-    alt: "Fashion-сет в черном образе в студии",
-    label: "Dark studio",
-    position: "object-center",
+    src: "/collection-black-crouch.png",
+    alt: "Fashion-сет в черном образе с сумкой",
+    label: "Black studio",
+    position: "object-[50%_42%]",
   },
   {
     src: "/collection-black-lifestyle.png",
@@ -25,16 +25,16 @@ const collectionImages = [
     position: "object-center",
   },
   {
-    src: "/collection-long-dress.png",
-    alt: "Каталожный сет в длинном платье",
-    label: "Long silhouette",
-    position: "object-top",
+    src: "/collection-hoodie-portrait.png",
+    alt: "Портретный fashion-сет в худи",
+    label: "Hoodie portrait",
+    position: "object-[50%_35%]",
   },
   {
-    src: "/collection-casual.png",
-    alt: "Повседневный fashion-сет",
-    label: "Casual look",
-    position: "object-top",
+    src: "/collection-black-mini-dress.png",
+    alt: "Fashion-сет в черном мини-платье",
+    label: "Mini dress",
+    position: "object-center",
   },
 ];
 

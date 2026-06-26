@@ -7,25 +7,25 @@ import { useState } from "react";
 
 const characterImages = [
   {
-    src: "/character-front.png",
+    src: "/character-front.jpg",
     alt: "Фронтальный портрет ИИ-персонажа",
     label: "Front",
     position: "object-center",
   },
   {
-    src: "/character-profile.png",
+    src: "/character-profile.jpg",
     alt: "Профиль ИИ-персонажа",
     label: "Profile",
     position: "object-center",
   },
   {
-    src: "/character-three-quarter.png",
+    src: "/character-three-quarter.jpg",
     alt: "Портрет ИИ-персонажа в три четверти",
     label: "3/4",
     position: "object-center",
   },
   {
-    src: "/character-full-body.png",
+    src: "/character-full-body.jpg",
     alt: "ИИ-персонаж в полный рост",
     label: "Full body",
     position: "object-top",

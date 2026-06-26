@@ -12,6 +12,15 @@ pnpm dev
 
 Откройте [http://localhost:3000](http://localhost:3000).
 
+Для проверки с iPhone используйте:
+
+```bash
+pnpm dev:lan
+```
+
+Затем откройте на iPhone адрес из строки `Network`, например
+`http://10.1.30.149:3000`. iPhone и Mac должны быть в одной Wi-Fi сети.
+
 ## Проверка
 
 ```bash

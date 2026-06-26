@@ -89,9 +89,12 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           className="resize-none rounded-2xl border border-black/10 bg-white/75 px-4 py-3 font-normal outline-none transition placeholder:text-black/30 focus:border-black/30"
         />
       </label>
-      <label className="grid gap-2 text-sm font-medium">
-        Бюджет / формат
+      <div className="grid gap-2">
+        <label htmlFor="budget-format" className="text-sm font-medium">
+          Бюджет / формат
+        </label>
         <select
+          id="budget-format"
           name="budget"
           defaultValue=""
           className="h-12 rounded-2xl border border-black/10 bg-white/75 px-4 font-normal outline-none transition focus:border-black/30"
@@ -104,7 +107,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           <option>Campaign</option>
           <option>Нужна рекомендация</option>
         </select>
-      </label>
+      </div>
       <button
         type="submit"
         disabled={status === "loading"}

@@ -26,10 +26,9 @@ export function HeroVisual() {
         className="absolute left-[5%] top-[8%] h-[56%] w-[48%] -rotate-4 overflow-hidden rounded-[28px] border border-white/70 bg-[#d9d3cf] shadow-lift"
       >
         <Image
-          src="/model-portrait.png"
+          src="/model-portrait.jpg"
           alt="Портрет виртуальной модели"
           fill
-          priority
           sizes="(max-width: 640px) 48vw, 275px"
           className="object-cover object-center"
         />
@@ -50,10 +49,9 @@ export function HeroVisual() {
         className="absolute right-[3%] top-[22%] h-[58%] w-[49%] rotate-3 overflow-hidden rounded-[30px] border border-white/70 bg-[#cbd4da] shadow-lift"
       >
         <Image
-          src="/model-campaign.png"
+          src="/model-campaign.jpg"
           alt="Fashion-съемка виртуальной модели"
           fill
-          priority
           sizes="(max-width: 640px) 49vw, 280px"
           className="object-cover object-[48%_center]"
         />

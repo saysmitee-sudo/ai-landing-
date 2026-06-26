@@ -7,25 +7,25 @@ import { useState } from "react";
 
 const appearanceImages = [
   {
-    src: "/appearance-curly-front.png",
+    src: "/appearance-curly-front.jpg",
     alt: "Портрет ИИ-модели с кудрявыми волосами",
     label: "Curly beauty",
     position: "object-center",
   },
   {
-    src: "/appearance-soft-curls.png",
+    src: "/appearance-soft-curls.jpg",
     alt: "Портрет ИИ-модели с мягкими локонами",
     label: "Soft curls",
     position: "object-center",
   },
   {
-    src: "/appearance-volume-curls.png",
+    src: "/appearance-volume-curls.jpg",
     alt: "Портрет ИИ-модели с объемными волосами",
     label: "Natural volume",
     position: "object-center",
   },
   {
-    src: "/appearance-straight-bangs.png",
+    src: "/appearance-straight-bangs.jpg",
     alt: "Портрет ИИ-модели с прямыми волосами",
     label: "Clean minimal",
     position: "object-center",
@@ -77,7 +77,6 @@ export function AppearanceCarousel() {
               src={activeImage.src}
               alt={activeImage.alt}
               fill
-              priority={activeIndex === 0}
               sizes="(max-width: 767px) 100vw, 540px"
               className={`object-cover ${activeImage.position}`}
             />

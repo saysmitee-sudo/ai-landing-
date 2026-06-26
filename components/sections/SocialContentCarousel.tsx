@@ -7,21 +7,21 @@ import { useState } from "react";
 
 const socialImages = [
   {
-    src: "/social-mirror-white.png",
+    src: "/social-mirror-white.jpg",
     alt: "UGC-style фото для соцсетей в зеркале",
     label: "Mirror story",
     meta: "Stories",
     position: "object-center",
   },
   {
-    src: "/social-elevator-lace.png",
+    src: "/social-elevator-lace.jpg",
     alt: "Вертикальный fashion-контент для Reels",
     label: "Reels frame",
     meta: "Reels",
     position: "object-center",
   },
   {
-    src: "/social-mirror-activewear.png",
+    src: "/social-mirror-activewear.jpg",
     alt: "Контент для соцсетей в activewear-образе",
     label: "Daily post",
     meta: "Post",

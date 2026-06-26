@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flassy-studio.example"),
+  metadataBase: new URL("https://flassystudio.ru"),
   title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
   description:
     "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для брендов одежды, обуви, beauty и lifestyle. Быстрее и дешевле классических съемок.",

@@ -7,31 +7,31 @@ import { useState } from "react";
 
 const collectionImages = [
   {
-    src: "/collection-white-dress.png",
+    src: "/collection-white-dress.jpg",
     alt: "Fashion-сет в белом платье",
     label: "Studio dress",
     position: "object-[48%_center]",
   },
   {
-    src: "/collection-black-crouch.png",
+    src: "/collection-black-crouch.jpg",
     alt: "Fashion-сет в черном образе с сумкой",
     label: "Black studio",
     position: "object-[50%_42%]",
   },
   {
-    src: "/collection-black-lifestyle.png",
+    src: "/collection-black-lifestyle.jpg",
     alt: "Lifestyle-сет в черном образе",
     label: "Lifestyle",
     position: "object-center",
   },
   {
-    src: "/collection-hoodie-portrait.png",
+    src: "/collection-hoodie-portrait.jpg",
     alt: "Портретный fashion-сет в худи",
     label: "Hoodie portrait",
     position: "object-[50%_35%]",
   },
   {
-    src: "/collection-black-mini-dress.png",
+    src: "/collection-black-mini-dress.jpg",
     alt: "Fashion-сет в черном мини-платье",
     label: "Mini dress",
     position: "object-center",

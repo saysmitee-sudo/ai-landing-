@@ -1,2 +1,4 @@
 allowBuilds:
   sharp: true
+verifyDepsBeforeRun: false
+scriptsPrependNodePath: true

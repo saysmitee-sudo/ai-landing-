@@ -1,7 +1,6 @@
 import { Palette, ScanFace, Sparkles, UsersRound } from "lucide-react";
 import { AppearanceCarousel } from "@/components/sections/AppearanceCarousel";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionBadge } from "@/components/shared/SectionBadge";
 
@@ -36,27 +35,13 @@ export function AppearanceSection() {
           <GlassCard className="relative overflow-hidden p-5 sm:p-7 lg:p-10">
             <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#cfc4ff]/35 blur-3xl" />
             <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#c0dfff]/35 blur-3xl" />
-            <FloatingAccents
-              className="opacity-70"
-              labels={["Face map", "Style ID", "Persona"]}
-              reverse
-            />
             <div className="relative z-10 grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-1">
                 <AppearanceCarousel />
               </div>
 
-              <div className="order-1 px-1 lg:order-2 lg:px-4">
+              <div className="order-2 px-1 lg:px-4">
                 <SectionBadge>Гибкость внешности</SectionBadge>
-                <h2 className="section-title mt-6">
-                  Можно сгенерировать абсолютно любую внешность
-                </h2>
-                <p className="body-copy mt-6">
-                  Подбираем типаж под бренд, аудиторию и задачу: черты лица,
-                  волосы, возраст, настроение, макияж и общий визуальный код.
-                  Персонаж может быть минималистичным, ярким, editorial,
-                  lifestyle или полностью собранным под новую кампанию.
-                </p>
 
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {appearancePoints.map((point) => {

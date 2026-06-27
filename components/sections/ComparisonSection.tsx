@@ -1,13 +1,11 @@
 import { Check, Minus } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { comparisonRows } from "@/data/site-content";
 
 export function ComparisonSection() {
   return (
     <section className="section-space relative overflow-hidden">
-      <FloatingAccents labels={["No studio", "Any location", "Fast edits"]} reverse />
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading

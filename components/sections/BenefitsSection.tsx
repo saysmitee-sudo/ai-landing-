@@ -1,5 +1,4 @@
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { GradientBlob } from "@/components/shared/GradientBlob";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { benefits, speedItems } from "@/data/site-content";
@@ -8,13 +7,11 @@ export function BenefitsSection() {
   return (
     <section id="benefits" className="section-space relative overflow-hidden">
       <GradientBlob className="-left-44 top-24 h-96 w-96 bg-[#dcd4ff]/50" />
-      <FloatingAccents labels={["Faster", "Scale", "Control"]} reverse />
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
             badge="Преимущества"
             title="Меньше затрат. Больше свободы. Быстрее результат."
-            description="Убираем сложную организацию классического продакшна, сохраняя контроль над эстетикой и качеством визуала."
           />
         </AnimatedSection>
         <div className="mt-8 grid gap-px overflow-hidden rounded-[32px] border border-black/[0.08] bg-black/[0.08] md:mt-10 md:grid-cols-2 lg:grid-cols-3">

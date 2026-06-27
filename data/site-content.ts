@@ -1,25 +1,20 @@
 import {
   Aperture,
   BadgeCheck,
-  Boxes,
-  BriefcaseBusiness,
   Camera,
   ChartNoAxesCombined,
   CircleDollarSign,
   Clock3,
   GalleryHorizontalEnd,
-  Gem,
   ImagePlus,
   Infinity,
   LayoutGrid,
   Megaphone,
-  Palette,
   ScanFace,
   ShoppingBag,
   SlidersHorizontal,
   Sparkles,
   Store,
-  UsersRound,
   WandSparkles,
   Zap,
 } from "lucide-react";
@@ -27,9 +22,7 @@ import type {
   CardItem,
   ComparisonRow,
   FAQItem,
-  PackageItem,
   ProcessStep,
-  Scenario,
 } from "@/types/content";
 
 export const navItems = [
@@ -42,7 +35,7 @@ export const navItems = [
 
 export const services: CardItem[] = [
   {
-    title: "Создание ИИ-персонажа",
+    title: "AI character setup",
     description:
       "Разрабатываем уникальную внешность, стиль, характер и визуальную айдентику модели под ваш бренд.",
     icon: ScanFace,
@@ -73,12 +66,6 @@ export const benefits: CardItem[] = [
     description:
       "Контент можно подготовить за дни, а новые идеи тестировать без недель организации.",
     icon: Zap,
-  },
-  {
-    title: "Любой тип внешности",
-    description:
-      "Создаем персонажа под аудиторию, страну, возраст и эстетику конкретного бренда.",
-    icon: UsersRound,
   },
   {
     title: "Бесконечные образы",
@@ -153,19 +140,6 @@ export const visualTypes: CardItem[] = [
   },
 ];
 
-export const audience = [
-  { label: "Бренды одежды", icon: ShoppingBag },
-  { label: "Обувные бренды", icon: Boxes },
-  { label: "Аксессуары", icon: Gem },
-  { label: "Косметика и beauty", icon: Sparkles },
-  { label: "Streetwear", icon: WandSparkles },
-  { label: "Premium fashion", icon: Gem },
-  { label: "Маркетплейсы", icon: Store },
-  { label: "Локальные бренды", icon: BriefcaseBusiness },
-  { label: "Стартапы", icon: Zap },
-  { label: "Рекламные агентства", icon: Palette },
-];
-
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
@@ -205,33 +179,6 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
-export const scenarios: Scenario[] = [
-  {
-    number: "01",
-    label: "COLLECTION DROP",
-    title: "Запуск новой коллекции",
-    description:
-      "Создаем ИИ-модель и визуальный мир запуска — от первого образа до финального рекламного креатива.",
-    deliverables: ["AI-персонаж", "Lookbook", "Lifestyle", "Ads"],
-  },
-  {
-    number: "02",
-    label: "ALWAYS-ON CONTENT",
-    title: "Контент для соцсетей на месяц",
-    description:
-      "Готовим цельный контент-пак, чтобы лента выглядела собранно, а команда не зависела от постоянных съемок.",
-    deliverables: ["Посты", "Stories", "Reels covers", "UGC-style"],
-  },
-  {
-    number: "03",
-    label: "BRAND FACE",
-    title: "Виртуальный амбассадор",
-    description:
-      "Разрабатываем постоянного героя бренда, который сохраняет характер и узнаваемость в каждой новой кампании.",
-    deliverables: ["Character guide", "Campaigns", "Social", "Consistency"],
-  },
-];
-
 export const comparisonRows: ComparisonRow[] = [
   {
     criterion: "Сроки",
@@ -258,49 +205,6 @@ export const comparisonRows: ComparisonRow[] = [
     criterion: "Правки",
     classic: "Часто нужна пересъемка",
     ai: "Можно доработать визуал",
-  },
-];
-
-export const packages: PackageItem[] = [
-  {
-    name: "Start",
-    subtitle: "Для теста идеи",
-    description:
-      "Небольшой пилот, чтобы увидеть персонажа в эстетике вашего бренда.",
-    features: [
-      "Базовая концепция",
-      "1 ИИ-модель",
-      "Небольшой фото-сет",
-      "Базовые правки",
-    ],
-  },
-  {
-    name: "Content Pack",
-    subtitle: "Для регулярного контента",
-    description:
-      "Система визуалов для стабильного присутствия бренда в соцсетях.",
-    features: [
-      "ИИ-модель",
-      "Серия фото-сетов",
-      "Разные образы",
-      "Контент для постов и Stories",
-      "Правки",
-    ],
-    featured: true,
-  },
-  {
-    name: "Campaign",
-    subtitle: "Для большого запуска",
-    description:
-      "Полноценный визуальный мир коллекции или рекламной кампании.",
-    features: [
-      "Разработка персонажа",
-      "Визуальная концепция",
-      "Несколько локаций",
-      "Рекламные креативы",
-      "Lookbook и lifestyle-сеты",
-      "Расширенные правки",
-    ],
   },
 ];
 

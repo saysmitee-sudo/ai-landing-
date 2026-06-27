@@ -1,7 +1,6 @@
 import { MessageCircle, Sparkles } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { ContactForm } from "@/components/shared/ContactForm";
-import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { GradientBlob } from "@/components/shared/GradientBlob";
 
 export function FinalCTA() {
@@ -14,11 +13,6 @@ export function FinalCTA() {
             <GradientBlob
               className="-bottom-32 -left-24 h-96 w-96 bg-[#5f9ed1]/40"
               duration={12}
-            />
-            <FloatingAccents
-              labels={["Brief", "Estimate", "Start"]}
-              tone="dark"
-              reverse
             />
             <div className="relative z-10 grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>

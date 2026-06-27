@@ -11,15 +11,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-      <div className="relative mx-auto flex h-[68px] max-w-[1280px] items-center justify-between overflow-hidden rounded-full border border-white/55 bg-white/[0.38] px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.85),inset_0_-1px_0_rgba(255,255,255,0.28),0_18px_55px_rgba(24,32,56,0.10)] backdrop-blur-3xl backdrop-saturate-150 sm:px-5">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(115deg,rgba(255,255,255,0.42),rgba(255,255,255,0.12)_42%,rgba(193,221,255,0.18)_100%)]"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-16 -top-20 h-32 w-48 rounded-full bg-white/45 blur-2xl"
-        />
+      <div className="liquid-header relative mx-auto flex h-[68px] max-w-[1280px] items-center justify-between overflow-hidden rounded-full px-4 sm:px-5">
         <a
           href="#top"
           className="relative z-10 flex items-center gap-2.5"
@@ -56,7 +48,7 @@ export function Header() {
 
         <button
           type="button"
-          className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/55 bg-white/[0.36] shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_8px_22px_rgba(22,30,48,0.08)] backdrop-blur-2xl lg:hidden"
+          className="liquid-icon-button relative z-10 flex h-10 w-10 items-center justify-center rounded-full lg:hidden"
           aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
@@ -76,7 +68,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.25 }}
-            className="mx-auto mt-2 max-w-[1280px] overflow-hidden rounded-[26px] border border-white/60 bg-white/90 p-3 shadow-glass backdrop-blur-2xl lg:hidden"
+            className="liquid-menu mx-auto mt-2 max-w-[1280px] overflow-hidden rounded-[26px] p-3 lg:hidden"
           >
             <nav className="grid" aria-label="Мобильная навигация">
               {navItems.map((item) => (

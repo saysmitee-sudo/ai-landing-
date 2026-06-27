@@ -2,7 +2,6 @@ import { ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { GlassCard } from "@/components/shared/GlassCard";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { FloatingAccents } from "@/components/shared/FloatingAccents";
 import { CharacterCarousel } from "@/components/sections/CharacterCarousel";
 import { CollectionCarousel } from "@/components/sections/CollectionCarousel";
 import { SocialContentCarousel } from "@/components/sections/SocialContentCarousel";
@@ -14,7 +13,6 @@ export function ServicesSection() {
       id="services"
       className="relative overflow-hidden pb-6 pt-2 md:pb-8 md:pt-5 lg:pb-10 lg:pt-5"
     >
-      <FloatingAccents labels={["Model ID", "Photo set", "AI flow"]} />
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
@@ -47,9 +45,6 @@ export function ServicesSection() {
                       <div className="px-2 pb-4 sm:px-4 md:py-6 lg:px-8">
                         <div className="mt-2 md:mt-6">
                           <p className="text-xs font-bold text-black/25">01</p>
-                          <h3 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-                            {service.title}
-                          </h3>
                           <p className="mt-4 max-w-xl text-sm leading-6 text-muted sm:text-base sm:leading-7">
                             {service.description}
                           </p>

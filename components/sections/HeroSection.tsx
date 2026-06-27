@@ -23,9 +23,9 @@ export function HeroSection() {
               Creative AI production
             </div>
             <h1 className="display-title mt-7 max-w-[720px]">
-              ИИ-персонажи и фото-сеты для{" "}
+              ИИ-персонажи для{" "}
               <span className="inline-block pb-[0.04em] pr-[0.08em] bg-gradient-to-r from-[#7667ea] via-[#927cec] to-[#6f9ed4] bg-clip-text text-transparent">
-                fashion-брендов
+                fashion брендов и бизнеса
               </span>
             </h1>
             <p className="body-copy mt-7 max-w-2xl">
@@ -34,9 +34,6 @@ export function HeroSection() {
               каталогов — быстрее и дешевле классических съемок.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton openContact className="w-full sm:w-auto">
-                Рассчитать стоимость проекта
-              </CTAButton>
               <CTAButton
                 href="#visuals"
                 variant="secondary"

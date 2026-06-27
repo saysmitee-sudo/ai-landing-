@@ -12,26 +12,10 @@ export type ProcessStep = {
   description: string;
 };
 
-export type Scenario = {
-  number: string;
-  label: string;
-  title: string;
-  description: string;
-  deliverables: string[];
-};
-
 export type ComparisonRow = {
   criterion: string;
   classic: string;
   ai: string;
-};
-
-export type PackageItem = {
-  name: string;
-  subtitle: string;
-  description: string;
-  features: string[];
-  featured?: boolean;
 };
 
 export type FAQItem = {

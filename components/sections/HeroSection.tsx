@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { GradientBlob } from "@/components/shared/GradientBlob";
@@ -5,6 +8,8 @@ import { HeroVisual } from "@/components/sections/HeroVisual";
 import { heroProofs, studioStats } from "@/data/site-content";
 
 export function HeroSection() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section
       id="top"
@@ -22,17 +27,37 @@ export function HeroSection() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#8172ef] shadow-[0_0_0_5px_rgba(129,114,239,0.12)]" />
               Creative AI production
             </div>
-            <h1 className="display-title mt-7 max-w-[720px]">
-              ИИ-персонажи для{" "}
-              <span className="inline-block pb-[0.04em] pr-[0.08em] bg-gradient-to-r from-[#7667ea] via-[#927cec] to-[#6f9ed4] bg-clip-text text-transparent">
-                fashion брендов и бизнеса
-              </span>
-            </h1>
-            <p className="body-copy mt-7 max-w-2xl">
-              Создаем виртуальных моделей под стиль вашего бренда: внешность,
-              характер, локации, образы и контент для рекламы, соцсетей и
-              каталогов — быстрее и дешевле классических съемок.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 14, scale: 0.985 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="hero-title-glow relative -mx-1 mt-7 max-w-[760px] px-1 py-2 sm:mx-0 sm:px-1"
+            >
+              <motion.div
+                aria-hidden="true"
+                className="absolute inset-y-0 -left-1/2 z-0 w-1/2 rotate-12 bg-gradient-to-r from-transparent via-white/40 to-transparent blur-2xl"
+                animate={
+                  shouldReduceMotion
+                    ? undefined
+                    : {
+                        x: ["-35%", "265%"],
+                        opacity: [0, 0.62, 0],
+                      }
+                }
+                transition={{
+                  duration: 5.5,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 2.2,
+                }}
+              />
+              <h1 className="display-title relative z-10">
+                ИИ-персонажи для{" "}
+                <span className="inline-block pb-[0.04em] pr-[0.08em] bg-gradient-to-r from-[#7667ea] via-[#927cec] to-[#6f9ed4] bg-clip-text text-transparent">
+                  fashion брендов и бизнеса
+                </span>
+              </h1>
+            </motion.div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton
                 href="#visuals"

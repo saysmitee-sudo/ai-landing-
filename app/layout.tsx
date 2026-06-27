@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
   description:
     "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для брендов одежды, обуви, beauty и lifestyle. Быстрее и дешевле классических съемок.",
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
     description:

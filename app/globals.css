@@ -170,6 +170,31 @@ a {
     -webkit-backdrop-filter: blur(28px) saturate(180%) contrast(1.06);
   }
 
+  .hero-title-glow::before {
+    content: "";
+    position: absolute;
+    inset: -22% -8% -18% -8%;
+    pointer-events: none;
+    border-radius: 999px;
+    background:
+      radial-gradient(ellipse at 24% 35%, rgba(255, 255, 255, 0.50), transparent 45%),
+      radial-gradient(ellipse at 70% 42%, rgba(134, 194, 255, 0.30), transparent 52%),
+      radial-gradient(ellipse at 46% 72%, rgba(147, 124, 236, 0.20), transparent 54%);
+    filter: blur(22px);
+    mix-blend-mode: screen;
+  }
+
+  .hero-title-glow::after {
+    content: "";
+    position: absolute;
+    inset: -34% -14% -28% -14%;
+    pointer-events: none;
+    border-radius: 999px;
+    background: linear-gradient(105deg, transparent 10%, rgba(255, 255, 255, 0.22), transparent 56%);
+    filter: blur(28px);
+    opacity: 0.70;
+  }
+
   .display-title {
     @apply text-balance text-[clamp(2.25rem,5vw,4.85rem)] font-semibold leading-[0.98] tracking-[-0.055em];
   }

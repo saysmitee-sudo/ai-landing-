@@ -1,10 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Plus } from "lucide-react";
 import { useState } from "react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 import { faqs } from "@/data/site-content";
 
 export function FAQSection() {
@@ -12,18 +10,25 @@ export function FAQSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="faq" className="section-space relative overflow-hidden">
+    <section id="faq" className="relative overflow-hidden border-t border-black/[0.08] bg-[#f8f8f6] py-14 sm:py-16 lg:py-20">
       <div className="page-container relative z-10">
-        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-10">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <AnimatedSection>
-            <SectionHeading
-              badge="FAQ"
-              title="Частые вопросы"
-              description="Если вашего вопроса нет в списке, оставьте заявку — коротко разберем задачу и подскажем возможный формат."
-            />
+            <div className="flex max-w-3xl flex-col items-start">
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-black/38">
+                FAQ
+              </p>
+              <h2 className="mt-3 text-balance text-[clamp(2rem,4.4vw,4.4rem)] font-medium leading-[1.02] tracking-[-0.045em]">
+                Частые вопросы
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-7 text-black/56 md:text-lg md:leading-8">
+                Если вашего вопроса нет в списке, оставьте заявку — коротко
+                разберем задачу и подскажем возможный формат.
+              </p>
+            </div>
           </AnimatedSection>
           <AnimatedSection>
-            <div className="overflow-hidden rounded-[30px] border border-black/[0.08] bg-white/65 px-5 sm:px-7">
+            <div className="border-y border-black/[0.1]">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
                 const answerId = `faq-answer-${index}`;
@@ -35,22 +40,18 @@ export function FAQSection() {
                   >
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left sm:py-7"
+                      className="flex w-full items-start justify-between gap-6 py-6 text-left"
                       aria-expanded={isOpen}
                       aria-controls={answerId}
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                     >
-                      <span className="text-base font-semibold tracking-[-0.02em] sm:text-lg">
+                      <span className="max-w-[720px] text-xl font-medium leading-tight tracking-[-0.03em] sm:text-2xl">
                         {faq.question}
                       </span>
                       <span
-                        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition duration-300 ${
-                          isOpen
-                            ? "rotate-45 border-black bg-ink text-white"
-                            : "border-black/10 bg-white/70 text-black/55"
-                        }`}
+                        className="shrink-0 text-2xl font-light leading-none text-black/58 transition duration-300"
                       >
-                        <Plus aria-hidden="true" className="h-4 w-4" />
+                        {isOpen ? "−" : "+"}
                       </span>
                     </button>
                     <AnimatePresence initial={false}>
@@ -67,7 +68,7 @@ export function FAQSection() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="max-w-2xl pb-7 pr-10 text-sm leading-6 text-muted">
+                          <p className="max-w-2xl pb-7 pr-10 text-base leading-7 text-black/56">
                             {faq.answer}
                           </p>
                         </motion.div>

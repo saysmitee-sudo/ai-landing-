@@ -1,12 +1,13 @@
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { GradientBlob } from "@/components/shared/GradientBlob";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { benefits, speedItems } from "@/data/site-content";
 
 export function BenefitsSection() {
   return (
-    <section id="benefits" className="section-space relative overflow-hidden">
-      <GradientBlob className="-left-44 top-24 h-96 w-96 bg-[#dcd4ff]/50" />
+    <section
+      id="benefits"
+      className="relative overflow-hidden border-t border-black/[0.08] bg-[#f8f8f6] py-14 sm:py-16 lg:py-20"
+    >
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
@@ -14,7 +15,7 @@ export function BenefitsSection() {
             title="Меньше затрат. Больше свободы. Быстрее результат."
           />
         </AnimatedSection>
-        <div className="mt-8 grid gap-px overflow-hidden rounded-[32px] border border-black/[0.08] bg-black/[0.08] md:mt-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid border-y border-black/[0.1] md:mt-10 md:grid-cols-2 lg:grid-cols-3">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon!;
             return (
@@ -23,14 +24,14 @@ export function BenefitsSection() {
                 delay={index * 0.05}
                 className="h-full"
               >
-                <article className="group h-full min-h-[190px] bg-[#fbfbfa]/95 p-5 transition duration-500 hover:bg-white sm:min-h-[205px] sm:p-6">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#eee9ff] to-[#e7f3ff] text-[#7566e5] transition duration-500 group-hover:scale-110">
+                <article className="group h-full min-h-[190px] border-b border-black/[0.08] p-5 transition duration-300 hover:bg-black/[0.025] md:border-r sm:min-h-[205px] sm:p-6">
+                  <span className="flex h-10 w-10 items-center justify-center text-black/70 transition duration-300 group-hover:text-black">
                     <Icon aria-hidden="true" className="h-[18px] w-[18px]" />
                   </span>
-                  <h3 className="mt-6 text-lg font-semibold tracking-[-0.03em] sm:text-xl">
+                  <h3 className="mt-6 text-lg font-medium tracking-[-0.03em] sm:text-xl">
                     {benefit.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-muted">
+                  <p className="mt-2 text-sm leading-6 text-black/54">
                     {benefit.description}
                   </p>
                 </article>
@@ -39,19 +40,16 @@ export function BenefitsSection() {
           })}
         </div>
         <AnimatedSection className="mt-5">
-          <div className="glass grid gap-3 rounded-[28px] p-4 sm:grid-cols-3 sm:p-5">
+          <div className="grid border-y border-black/[0.1] sm:grid-cols-3">
             {speedItems.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.label}
-                  className="flex items-center gap-3 rounded-2xl bg-white/60 px-4 py-4"
+                  className="flex items-center gap-3 border-b border-black/[0.08] py-4 sm:border-b-0 sm:border-r sm:px-5"
                 >
-                  <Icon
-                    aria-hidden="true"
-                    className="h-4 w-4 text-[#7566e5]"
-                  />
-                  <span className="text-sm font-semibold">{item.label}</span>
+                  <Icon aria-hidden="true" className="h-4 w-4 text-black/62" />
+                  <span className="text-sm font-medium">{item.label}</span>
                 </div>
               );
             })}

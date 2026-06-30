@@ -12,6 +12,10 @@ pnpm dev
 
 Откройте [http://localhost:3000](http://localhost:3000).
 
+Локальный dev-сервер запускается через Turbopack. Это убирает нестабильный
+Webpack dev runtime в Next.js 15, который может показывать overlay
+`__webpack_modules__[moduleId] is not a function` после hot reload.
+
 Для проверки с iPhone используйте:
 
 ```bash

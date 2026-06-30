@@ -38,7 +38,7 @@ export function ContactDialog() {
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/30 p-4 backdrop-blur-md sm:p-6"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/25 p-4 backdrop-blur-sm sm:p-6"
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -50,7 +50,7 @@ export function ContactDialog() {
           }}
         >
           <motion.div
-            className="relative my-auto w-full max-w-2xl overflow-hidden rounded-[30px] border border-white/50 bg-[#f8f8f6]/95 p-5 shadow-2xl backdrop-blur-3xl sm:p-8"
+            className="relative my-auto w-full max-w-2xl overflow-hidden border border-black/[0.1] bg-[#f8f8f6] p-5 sm:p-8"
             initial={
               shouldReduceMotion ? false : { opacity: 0, y: 24, scale: 0.98 }
             }
@@ -58,30 +58,26 @@ export function ContactDialog() {
             exit={{ opacity: 0, y: 14, scale: 0.98 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div
-              aria-hidden="true"
-              className="absolute -right-24 -top-28 h-64 w-64 rounded-full bg-gradient-to-br from-[#cfc4ff] to-[#b7d8ff] opacity-40 blur-3xl"
-            />
             <button
               ref={closeButtonRef}
               type="button"
               onClick={() => setOpen(false)}
-              className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black/60 transition hover:bg-white hover:text-black"
+              className="absolute right-5 top-5 z-10 flex h-8 w-8 items-center justify-center text-black/58 transition hover:text-black"
               aria-label="Закрыть форму"
             >
               <X aria-hidden="true" className="h-4 w-4" />
             </button>
             <div className="relative">
-              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#7465e7]">
+              <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-black/38">
                 Новый проект
               </span>
               <h2
                 id="contact-dialog-title"
-                className="mt-3 pr-12 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl"
+                className="mt-3 pr-12 text-3xl font-medium tracking-[-0.04em] sm:text-4xl"
               >
                 Расскажите о задаче
               </h2>
-              <p className="mb-7 mt-3 max-w-xl text-sm leading-6 text-muted">
+              <p className="mb-7 mt-3 max-w-xl text-sm leading-6 text-black/56">
                 Коротко опишите бренд и желаемый результат. Мы предложим
                 подходящий формат и следующий шаг.
               </p>

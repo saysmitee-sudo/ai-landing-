@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://flassystudio.ru"),
-  title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
+  title: "Flassy Studio — AI-продакшн и визуальный контент для брендов",
   description:
-    "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для брендов одежды, обуви, beauty и lifestyle. Быстрее и дешевле классических съемок.",
+    "Создаем AI-моделей, фото-сеты и рекламные визуалы для fashion, beauty и lifestyle-брендов. Быстрее, гибче и выгоднее классических съемок.",
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -14,9 +14,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "Flassy Studio — ИИ-модели и фото-сеты для брендов",
+    title: "Flassy Studio — AI-продакшн и визуальный контент для брендов",
     description:
-      "Создаем виртуальных ИИ-персонажей, фото-сеты и рекламные визуалы для fashion, beauty и lifestyle-брендов.",
+      "Создаем AI-моделей, фото-сеты и рекламные визуалы для fashion, beauty и lifestyle-брендов. Быстрее, гибче и выгоднее классических съемок.",
+    url: "https://flassystudio.ru",
     type: "website",
     locale: "ru_RU",
     images: [

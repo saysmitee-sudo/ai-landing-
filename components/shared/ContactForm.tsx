@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, LoaderCircle, Send } from "lucide-react";
+import { LoaderCircle, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 type ContactFormProps = {
@@ -22,21 +22,21 @@ export function ContactForm({ compact = false }: ContactFormProps) {
   if (status === "success") {
     return (
       <div
-        className={`flex ${compact ? "min-h-[360px]" : "min-h-[410px]"} flex-col items-center justify-center rounded-[24px] border border-emerald-900/10 bg-emerald-50/70 px-6 text-center`}
+        className={`flex ${compact ? "min-h-[320px]" : "min-h-[380px]"} flex-col justify-center border-y border-black/[0.1] px-0`}
         role="status"
       >
-        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-white shadow-lg shadow-emerald-900/15">
-          <Check aria-hidden="true" className="h-6 w-6" />
-        </span>
-        <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em]">
+        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-black/38">
+          Отправлено
+        </p>
+        <h3 className="mt-3 text-3xl font-medium tracking-[-0.04em]">
           Заявка принята
         </h3>
-        <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
+        <p className="mt-4 max-w-sm text-base leading-7 text-black/56">
           Спасибо! Мы изучим задачу и свяжемся с вами, чтобы обсудить формат
           проекта.
         </p>
         <button
-          className="mt-7 text-sm font-semibold underline decoration-black/20 underline-offset-4"
+          className="mt-7 w-fit border-b border-black pb-1 text-sm font-medium"
           type="button"
           onClick={() => setStatus("idle")}
         >
@@ -47,57 +47,57 @@ export function ContactForm({ compact = false }: ContactFormProps) {
   }
 
   return (
-    <form className="grid gap-4" onSubmit={handleSubmit}>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="grid gap-2 text-sm font-medium">
+    <form className="grid gap-5" onSubmit={handleSubmit}>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <label className="grid gap-2 text-sm font-medium text-black">
           Имя
           <input
             required
             name="name"
             autoComplete="name"
             placeholder="Как к вам обращаться"
-            className="h-12 rounded-2xl border border-black/10 bg-white/75 px-4 font-normal outline-none transition placeholder:text-black/30 focus:border-black/30"
+            className="h-12 border-0 border-b border-black/16 bg-transparent px-0 font-normal outline-none transition placeholder:text-black/30 focus:border-black/50"
           />
         </label>
-        <label className="grid gap-2 text-sm font-medium">
+        <label className="grid gap-2 text-sm font-medium text-black">
           Бренд
           <input
             required
             name="brand"
             autoComplete="organization"
             placeholder="Название бренда"
-            className="h-12 rounded-2xl border border-black/10 bg-white/75 px-4 font-normal outline-none transition placeholder:text-black/30 focus:border-black/30"
+            className="h-12 border-0 border-b border-black/16 bg-transparent px-0 font-normal outline-none transition placeholder:text-black/30 focus:border-black/50"
           />
         </label>
       </div>
-      <label className="grid gap-2 text-sm font-medium">
+      <label className="grid gap-2 text-sm font-medium text-black">
         Telegram / Email
         <input
           required
           name="contact"
           placeholder="@username или hello@brand.com"
-          className="h-12 rounded-2xl border border-black/10 bg-white/75 px-4 font-normal outline-none transition placeholder:text-black/30 focus:border-black/30"
+          className="h-12 border-0 border-b border-black/16 bg-transparent px-0 font-normal outline-none transition placeholder:text-black/30 focus:border-black/50"
         />
       </label>
-      <label className="grid gap-2 text-sm font-medium">
+      <label className="grid gap-2 text-sm font-medium text-black">
         Что нужно создать?
         <textarea
           required
           name="task"
           rows={compact ? 3 : 4}
           placeholder="Расскажите о коллекции, контенте или персонаже"
-          className="resize-none rounded-2xl border border-black/10 bg-white/75 px-4 py-3 font-normal outline-none transition placeholder:text-black/30 focus:border-black/30"
+          className="resize-none border-0 border-b border-black/16 bg-transparent px-0 py-3 font-normal outline-none transition placeholder:text-black/30 focus:border-black/50"
         />
       </label>
       <div className="grid gap-2">
-        <label htmlFor="budget-format" className="text-sm font-medium">
+        <label htmlFor="budget-format" className="text-sm font-medium text-black">
           Бюджет / формат
         </label>
         <select
           id="budget-format"
           name="budget"
           defaultValue=""
-          className="h-12 rounded-2xl border border-black/10 bg-white/75 px-4 font-normal outline-none transition focus:border-black/30"
+          className="h-12 border-0 border-b border-black/16 bg-transparent px-0 font-normal outline-none transition focus:border-black/50"
         >
           <option value="" disabled>
             Необязательно
@@ -111,7 +111,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-2 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-ink px-5 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(17,17,17,0.18)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-70"
+        className="mt-4 inline-flex min-h-[48px] items-center justify-center gap-2 border border-black bg-black px-5 text-sm font-medium text-white transition hover:bg-black/80 disabled:cursor-wait disabled:opacity-70"
       >
         {status === "loading" ? (
           <>
@@ -128,7 +128,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
           </>
         )}
       </button>
-      <p className="text-center text-[11px] leading-5 text-black/40">
+      <p className="text-left text-[11px] leading-5 text-black/40">
         Отправляя форму, вы соглашаетесь на обработку контактных данных.
       </p>
     </form>

@@ -27,8 +27,6 @@ import type {
 
 export const navItems = [
   { label: "Услуги", href: "#services" },
-  { label: "Преимущества", href: "#benefits" },
-  { label: "Процесс", href: "#process" },
   { label: "FAQ", href: "#faq" },
   { label: "Связаться", href: "#contact" },
 ];

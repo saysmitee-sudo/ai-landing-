@@ -1,26 +1,26 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Sparkles, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navItems } from "@/data/site-content";
-import { CTAButton } from "@/components/shared/CTAButton";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const openContact = () => {
+    window.dispatchEvent(new CustomEvent("open-contact-form"));
+    setMenuOpen(false);
+  };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-      <div className="liquid-header relative mx-auto flex h-[68px] max-w-[1280px] items-center justify-between overflow-hidden rounded-full px-4 sm:px-5">
+    <header className="liquid-topbar fixed inset-x-0 top-0 z-50 border-b border-black/[0.08] text-black">
+      <div className="relative flex h-16 w-full items-center justify-between px-5 sm:px-8 lg:px-10">
         <a
           href="#top"
-          className="relative z-10 flex items-center gap-2.5"
+          className="relative z-10 flex items-center"
           aria-label="Flassy Studio — на главную"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-white">
-            <Sparkles aria-hidden="true" className="h-4 w-4" />
-          </span>
-          <span className="text-sm font-bold tracking-[-0.02em] sm:text-base">
+          <span className="text-sm font-medium tracking-[-0.01em] sm:text-[15px]">
             Flassy Studio
           </span>
         </a>
@@ -33,22 +33,24 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[13px] font-medium text-black/60 transition hover:text-black"
+              className="text-xs font-medium text-black/56 transition hover:text-black"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="relative z-10 hidden sm:block">
-          <CTAButton openContact className="min-h-10 px-4">
-            Обсудить проект
-          </CTAButton>
-        </div>
+        <button
+          type="button"
+          onClick={openContact}
+          className="relative z-10 hidden text-xs font-medium text-black/64 transition hover:text-black sm:block"
+        >
+          Обсудить проект
+        </button>
 
         <button
           type="button"
-          className="liquid-icon-button relative z-10 flex h-10 w-10 items-center justify-center rounded-full lg:hidden"
+          className="relative z-10 flex h-10 w-10 items-center justify-center text-black/72 transition hover:text-black lg:hidden"
           aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
@@ -67,8 +69,8 @@ export function Header() {
             initial={{ opacity: 0, y: -10, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
-            transition={{ duration: 0.25 }}
-            className="liquid-menu mx-auto mt-2 max-w-[1280px] overflow-hidden rounded-[26px] p-3 lg:hidden"
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="liquid-mobile-menu border-t border-black/[0.08] px-5 py-3 text-black sm:px-8 lg:hidden"
           >
             <nav className="grid" aria-label="Мобильная навигация">
               {navItems.map((item) => (
@@ -76,17 +78,18 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3.5 text-sm font-semibold transition hover:bg-black/[0.04]"
+                  className="py-3 text-sm font-medium text-black/64 transition hover:text-black"
                 >
                   {item.label}
                 </a>
               ))}
-              <CTAButton
-                openContact
-                className="mt-2 w-full sm:hidden"
+              <button
+                type="button"
+                onClick={openContact}
+                className="mt-2 border-t border-black/[0.08] py-3 text-left text-sm font-medium text-black"
               >
                 Обсудить проект
-              </CTAButton>
+              </button>
             </nav>
           </motion.div>
         ) : null}

@@ -11,7 +11,6 @@ export function BenefitsSection() {
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
-            badge="Преимущества"
             title="Меньше затрат. Больше свободы. Быстрее результат."
           />
         </AnimatedSection>

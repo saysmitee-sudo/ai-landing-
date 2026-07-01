@@ -11,7 +11,6 @@ export function VisualTypesSection() {
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
-            badge="Возможности"
             title="От каталога до рекламной кампании"
           />
         </AnimatedSection>
@@ -31,10 +30,7 @@ export function VisualTypesSection() {
                     <Icon aria-hidden="true" className="h-3.5 w-3.5" />
                   </span>
                   <div className="relative mt-5">
-                    <p className="text-[9px] font-medium uppercase tracking-[0.16em] text-black/30">
-                      Format {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="mt-1.5 text-[15px] font-medium leading-tight tracking-[-0.025em] sm:text-base">
+                    <h3 className="text-[15px] font-medium leading-tight tracking-[-0.025em] sm:text-base">
                       {item.title}
                     </h3>
                     <p className="mt-2 text-[11px] leading-[1.45] text-black/52">

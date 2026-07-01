@@ -15,10 +15,7 @@ export function FAQSection() {
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <AnimatedSection>
             <div className="flex max-w-3xl flex-col items-start">
-              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-black/38">
-                FAQ
-              </p>
-              <h2 className="mt-3 text-balance text-[clamp(2rem,4.4vw,4.4rem)] font-medium leading-[1.02] tracking-[-0.045em]">
+              <h2 className="text-balance text-[clamp(2rem,4.4vw,4.4rem)] font-medium leading-[1.02] tracking-[-0.045em]">
                 Частые вопросы
               </h2>
               <p className="mt-6 max-w-xl text-base leading-7 text-black/56 md:text-lg md:leading-8">

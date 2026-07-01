@@ -11,7 +11,6 @@ export function ProcessSection() {
       <div className="page-container relative z-10">
         <AnimatedSection>
           <SectionHeading
-            badge="Процесс"
             title="Как проходит работа"
             description="Прозрачный маршрут от первой идеи до готовых материалов. Вы участвуете в ключевых согласованиях и понимаете, что происходит на каждом этапе."
           />
@@ -21,14 +20,8 @@ export function ProcessSection() {
             {processSteps.map((step, index) => (
               <AnimatedSection key={step.number} delay={index * 0.07}>
                 <article className="relative min-h-[190px] border-b border-white/10 py-6 lg:min-h-[310px] lg:border-b-0 lg:border-r lg:px-5">
-                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-white/42">
-                    {step.number}
-                  </span>
-                  <div className="mt-8 lg:min-h-[205px]">
-                    <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-white/38">
-                      Этап {index + 1}
-                    </p>
-                    <h3 className="mt-3 text-lg font-medium tracking-[-0.025em]">
+                  <div className="lg:min-h-[205px]">
+                    <h3 className="text-lg font-medium tracking-[-0.025em]">
                       {step.title}
                     </h3>
                     <p className="mt-3 text-xs leading-5 text-white/52">
